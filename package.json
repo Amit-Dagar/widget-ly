@@ -1,5 +1,5 @@
 {
-  "name": "widgetly",
+  "name": "react-widgetly",
   "private": false,
   "version": "1.0.0",
   "type": "module",
@@ -37,12 +37,12 @@
   ],
   "author": "Vivek | Amit",
   "license": "MIT",
-  "main": "./dist/widgetly.umd.js",
-  "module": "./dist/widgetly.es.js",
+  "main": "./dist/react-widgetly.umd.js",
+  "module": "./dist/react-widgetly.es.js",
   "exports": {
     ".": {
-      "import": "./dist/widgetly.es.js",
-      "require": "./dist/widgetly.umd.js"
+      "import": "./dist/react-widgetly.es.js",
+      "require": "./dist/react-widgetly.umd.js"
     }
   }
 }

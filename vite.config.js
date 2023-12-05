@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve("src", "components/index.jsx"),
-      name: "widgetly",
-      fileName: (format) => `widgetly.${format}.js`,
+      name: "react-widgetly",
+      fileName: (format) => `react-widgetly.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom"],
