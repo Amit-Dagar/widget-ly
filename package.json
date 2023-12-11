@@ -1,12 +1,28 @@
 {
   "name": "react-widgetly",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "npm run build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -24,7 +40,8 @@
     "eslint-plugin-react-refresh": "^0.4.4",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.5",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.4"
   },
   "description": "A react library for widgets",
   "repository": {
@@ -36,13 +53,5 @@
     "components"
   ],
   "author": "Vivek | Amit",
-  "license": "MIT",
-  "main": "./dist/react-widgetly.umd.js",
-  "module": "./dist/react-widgetly.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/react-widgetly.es.js",
-      "require": "./dist/react-widgetly.umd.js"
-    }
-  }
+  "license": "MIT"
 }
